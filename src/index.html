@@ -3,7 +3,57 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+
 		<title>Form Validation Practice</title>
 	</head>
-	<body></body>
+	<body>
+		<h1>Please find below an example of a form whose fields we need to validate on the client side.</h1>
+		<form action="" novalidate>
+			<fieldset>
+				<legend>Fill the following form to register !</legend>
+				<div>
+					<label for="username">User Name</label>
+					<i class="fas fa-user"></i>
+
+					<input type="text" name="username" id="username" placeholder="Joy Shaheb" />
+
+					<i class="fas fa-exclamation-circle failure-icon"></i>
+					<i class="far fa-check-circle success-icon"></i>
+
+					<div class="error"></div>
+				</div>
+				<div>
+					<label for="email">Email*</label>
+					<input type="email" name="email" id="email" placeholder="abc@email.com" />
+					<div class="emailErrorContainer"></div>
+				</div>
+				<div>
+					<label for="country">Country*</label>
+					<select name="country" id="country">
+						<option value="">--	Please choose an option--</option>
+						<option value="France">France</option>
+						<option value="Belgium">Belgium</option>
+						<option value="Switzerland">Switzerland</option>
+					</select>
+				</div>
+				<div>
+					<label for="postal">Postal Code*</label>
+					<input type="number" name="postal" id="postal" />
+				</div>
+				<div>
+					<label for="password">Password*</label>
+					<input type="password" name="password" id="password" />
+				</div>
+				<div>
+					<label for="passwordConf">Password confirmation*</label>
+					<input type="password" name="passwordConf" id="passwordConf" />
+				</div>
+			</fieldset>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
 </html>

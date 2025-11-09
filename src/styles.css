@@ -1,3 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
-	background-color: grey;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+}
+
+h1 {
+	padding: 10px;
+}
+
+form {
+	padding: 20px;
+	width: 60%;
+	position: relative;
+}
+
+fieldset {
+	padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 15px;
+}
+
+form button {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	position: absolute;
+	right: 20px;
+    bottom: -10px;
+}
+
+input:invalid {
+    background-color: red;
 }
